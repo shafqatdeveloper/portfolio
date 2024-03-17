@@ -21,8 +21,11 @@
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@ng-icons/core": "^27.2.0",
+    "@ng-icons/css.gg": "^27.2.0",
+    "@ng-icons/font-awesome": "^27.2.0",
     "@ng-icons/heroicons": "^27.2.0",
     "@ng-icons/ionicons": "^27.2.0",
+    "@ng-icons/typicons": "^27.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

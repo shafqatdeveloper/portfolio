@@ -1,4 +1,4 @@
-import { NgIcon, NgIconComponent, provideIcons } from '@ng-icons/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { heroUsers,heroDevicePhoneMobile } from '@ng-icons/heroicons/outline';
