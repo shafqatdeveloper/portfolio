@@ -1,4 +1,9 @@
 <div class="w-full h-screen flex justify-between px-16 bg-gradient-to-r from-pink-300 via-blue-300 to-green-200 py-20">
   <app-contact></app-contact>
-  <app-navlinks></app-navlinks>
+  <app-home *ngIf="activeComponent==='home'" [active]="'home'" ></app-home>
+  <app-education *ngIf="activeComponent==='education'" ></app-education>
+  <app-contactme *ngIf="activeComponent==='contactme'" ></app-contactme>
+  <app-resume *ngIf="activeComponent==='resume'" ></app-resume>
+  <app-works *ngIf="activeComponent==='works'" ></app-works>
+  <app-navlinks (updateActiveState)="handleActiveComponent($event)" [activeComponent]="active"></app-navlinks>
 </div>
