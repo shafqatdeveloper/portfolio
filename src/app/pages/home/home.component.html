@@ -1,1 +1,32 @@
-<p>home works!</p>
+<div class="w-full h-full flex justify-center bg-white rounded-md">
+    <div class="flex w-[90%] flex-col gap-4">
+        <div class="flex items-center gap-5 pt-4">
+            <h1 class="text-2xl font-bold font-sans">About</h1>
+            <div class="w-40 h-[2px] bg-blue-500"></div>
+        </div>
+        <div class="text-sm flex flex-col gap-2">
+            <p>
+                Crafting the future with code. With a passion for technology and a knack for problem-solving, I bring ideas to life through robust and scalable software solutions.
+            </p>
+            <p>
+                My expertise spans across full-stack development, cloud computing, and agile methodologies. Let's build something amazing together.
+            </p>
+        </div>
+        <div class="pb-5">
+            <h1 class="capitalize text-xl font-sans font-bold">what i do!</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+                <div *ngFor="let item of about" [ngClass]="item.bgColor" class=" flex items-center gap-3 justify-start rounded-lg">
+                    <div class="flex items-center px-2 py-2.5 gap-2">
+                        <div [ngClass]="item.bgColor" class="place-self-start mt-1">
+                            <ng-icon [ngClass]="item.iconColor" name="{{item.icon}}"></ng-icon>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                        <h1 class="font-bold font-sans capitalize">{{item.name}}</h1>
+                        <p class="text-sm">{{item.desc}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

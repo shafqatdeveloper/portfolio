@@ -1,5 +1,9 @@
-<div class="w-full md:w-64 flex flex-col items-center gap-5 h-[80vh] bg-white shadow-xl rounded-md ">
-    <div class="w-28 h-28 md:mt-[-3rem] bg-pink-300 rounded-lg p-3">
+<div (click)="expandContactSection()" class="w-full flex items-center px-10 justify-between bg-white rounded-md h-12">
+    <h1 class="font-bold font-sans tracking-wider uppercase">Profile</h1>
+    <ng-icon class="" name="heroArrowDown"></ng-icon>
+</div>
+<div *ngIf="contactSectionExpanded" class="w-full mt-4 py-4 flex flex-col items-center gap-5 h-[87vh] bg-white shadow-xl rounded-md">
+    <div class="w-28 h-28 bg-pink-300 rounded-lg p-3">
         <img src="https://res.cloudinary.com/daxuxn2ec/image/upload/v1710956923/msr_cqkmhl.jpg" class="w-full object-cover rounded-lg scale-125 h-full"  alt="">
     </div>
     <div class="mt-[-7px]">
@@ -7,7 +11,7 @@
         <h1 class="text-xs text-gray-400 uppercase font-medium text-center">Software Engineer</h1>
     </div>
     <!--Social Media Icons -->
-    <div class="flex items-center justify-center gap-1 ">
+    <div class="flex items-center justify-center gap-3 ">
         <a target="_blank" href="https://www.linkedin.com/in/muhammad-shafqat-rasool-356540255/" class="p-1.5 text-blue-600 hover:scale-110 transition-all duration-200 cursor-pointer flex items-center justify-center bg-[#e8e8e8] rounded-md hover:bg-blue-500 hover:text-blue-100">
             <ng-icon name="ionLogoLinkedin"></ng-icon>
         </a>
@@ -29,7 +33,7 @@
 
     </div>
     <!-- Personal Information -->
-    <div class="bg-[#f0efef] w-3/4 rounded-md p-2 flex flex-col  gap-3">
+    <div class="bg-[#f0efef] w-4/5 rounded-md p-2 flex flex-col  gap-3">
             <div class="flex items-center gap-3.5">
                 <div class="bg-white px-2 pt-1.5 rounded-md">
                     <ng-icon size="20" class="text-red-500" name="heroDevicePhoneMobile"></ng-icon>

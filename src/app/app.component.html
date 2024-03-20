@@ -1,9 +1,21 @@
-<div class="w-full h-screen flex justify-between px-16 bg-gradient-to-r from-pink-300 via-blue-300 to-green-200 py-20">
-  <app-contact></app-contact>
+<div class="w-full md:min-h-[90vh] flex flex-col items-center md:items-start  md:flex-row justify-between gap-4 px-2 sm:px-5 md:px-12 bg-gradient-to-r from-pink-300 via-blue-300 to-green-200 py-4 md:py-20">
+  <div class="md:hidden w-full">
+    <app-navlinks (updateActiveState)="handleActiveComponent($event)" [activeComponent]="active"></app-navlinks>
+  </div>
+  <div class="md:hidden w-full">
+    <app-mobilecontact></app-mobilecontact>
+  </div>
+  <div class="hidden md:block">
+    <app-contact></app-contact>
+  </div>
+  <div class="w-full md:px-3">
   <app-home *ngIf="activeComponent==='home'" [active]="'home'" ></app-home>
   <app-education *ngIf="activeComponent==='education'" ></app-education>
   <app-contactme *ngIf="activeComponent==='contactme'" ></app-contactme>
   <app-resume *ngIf="activeComponent==='resume'" ></app-resume>
   <app-works *ngIf="activeComponent==='works'" ></app-works>
-  <app-navlinks (updateActiveState)="handleActiveComponent($event)" [activeComponent]="active"></app-navlinks>
+  </div>
+  <div class="hidden md:block">
+    <app-navlinks (updateActiveState)="handleActiveComponent($event)" [activeComponent]="active"></app-navlinks>
+  </div>
 </div>

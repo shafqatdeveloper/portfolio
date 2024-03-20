@@ -9,11 +9,12 @@ import { ResumeComponent } from './pages/resume/resume.component';
 import { WorksComponent } from './pages/works/works.component';
 import { ContactmeComponent } from './pages/contactme/contactme.component';
 import { NgIf } from '@angular/common';
+import { MobilecontactComponent } from './sidebar/mobilecontact/mobilecontact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ContactComponent,MatIconModule,NavlinksComponent,HomeComponent,EducationComponent,ResumeComponent,ContactmeComponent,WorksComponent,NgIf],
+  imports: [RouterOutlet,ContactComponent,MobilecontactComponent,MatIconModule,NavlinksComponent,HomeComponent,EducationComponent,ResumeComponent,ContactmeComponent,WorksComponent,NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
